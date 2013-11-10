@@ -180,6 +180,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.snapshot_timer=22 \
     ro.config.multimode_cdma=1 \
     ro.config.combined_signal=true \
+    ro.cam.hw.version=dlx \
     ro.gsm.data_retry_config=max_retries=infinite,5000,5000,60000,120000,480000,900000 \
     ro.opengles.version=196608 \
     persist.eons.enabled=false
