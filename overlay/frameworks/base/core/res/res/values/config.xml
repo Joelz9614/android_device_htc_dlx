@@ -209,6 +209,12 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">19</integer>
 
+    <!-- MMS user agent string -->
+    <string name="config_mms_user_agent" translatable="false">pcdadr6435</string>
+
+    <!-- MMS user agent prolfile url -->
+    <string name="config_mms_user_agent_profile_url" translatable="false">http://uaprof.vtext.com/pcd/adr6435/adr6435.xml</string>
+
     <!-- reference volume index for music stream to limit headphone volume and display warning -->
     <integer name="config_safe_media_volume_index">7</integer>
 
@@ -226,5 +232,8 @@
 
     <!-- Device supports LED flashlight -->
     <bool name="config_enableTorch">true</bool>
+
+    <!-- Disable lockscreen translucent decor by default -->
+    <bool name="config_enableLockScreenTranslucentDecor">true</bool>
 
 </resources>
