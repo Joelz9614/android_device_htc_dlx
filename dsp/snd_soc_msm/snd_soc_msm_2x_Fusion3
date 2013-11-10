@@ -389,6 +389,31 @@ SectionVerb
 	PlaybackPCM  4
 EndSection
 
+SectionVerb
+  Name "HiFi Low PowerUSB PROXY Rx"
+
+  EnableSequence
+    'AFE_PCM_RX Audio Mixer MultiMedia3':1:1
+  EndSequence
+
+  DisableSequence
+    'AFE_PCM_RX Audio Mixer MultiMedia3':1:0
+  EndSequence
+  PlaybackPCM  4
+EndSection
+
+SectionVerb
+  Name "HiFi Low PowerUSB PROXY Tx"
+
+  EnableSequence
+  EndSequence
+
+  DisableSequence
+  EndSequence
+  PlaybackPCM  4
+EndSection
+
+
 # HTC additional verbs
 SectionVerb
 	Name "HiFi Low PowerSpeaker"
@@ -1990,9 +2015,18 @@ SectionDevice
 	Name "Speaker DMIC Stereo"
 
 	EnableSequence
+               'SLIM_0_TX Channels':0:One
+               'SLIM TX7 MUX':0:DEC9
+               'DEC9 MUX':0:DMIC4
+               'DEC9 Volume':2:5C
+               'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	DisableSequence
+                'SLIM_0_TX Channels':0:ZERO
+                'DEC9 MUX':0:ZERO
+                'DEC9 Volume':2:0
+                'MICBIAS3 CAPLESS Switch':1:0
 	EndSequence
 
 	ACDBID  35:2
